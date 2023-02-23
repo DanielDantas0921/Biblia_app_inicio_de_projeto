@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_activity_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Início" />
+
+        <item
+            android:id="@+id/nav_activity_bibly"
+            android:icon="@drawable/baseline_book_24"
+            android:title="Ler a Bíblia" />
+
+        <item
+            android:id="@+id/nav_activity_preferences"
+            android:icon="@drawable/baseline_room_preferences_24"
+            android:title="Preferências/Ferramentas" />
+
+
+    </group>
+
+    <item android:title="Contato Desenvolvedor">
+        <menu>
+
+            <item
+                android:id="@+id/nav_fragment_about"
+                android:icon="@drawable/icons_about"
+                android:title="Sobre" />
+        </menu>
+    </item>
+
+
+
+
+</menu>

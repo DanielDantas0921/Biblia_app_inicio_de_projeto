@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@layout/home_fragment"
+    android:id="@+id/mobile_navigation">
+
+
+
+    <fragment
+        android:id="@+id/nav_activity_home"
+        android:label="Início"
+        android:name="com.example.biblia_app.activity_principal.view.FragmentHome"
+        tools:layout="@layout/home_fragment"
+        >
+
+    </fragment>
+    <activity
+        android:id="@+id/nav_activity_bibly"
+        android:label="Ler a bíblia"
+        android:name="com.example.biblia_app.activity_principal.view.BiblyActivity"
+        tools:layout="@layout/activity_bibly"
+        />
+
+    <activity
+        android:id="@+id/nav_activity_preferences"
+        android:label="Preferências/ Ferramentas"
+        android:name="com.example.biblia_app.activity_principal.view.PreferencesActivity"
+        tools:layout="@layout/activity_preferences"
+        />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:label="Início"
+        android:name="com.example.biblia_app.activity_principal.view.FragmentHome"
+        tools:layout="@layout/home_fragment"
+
+
+        >
+
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_activity_bibly"
+            app:destination="@id/nav_activity_bibly" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_activity_preferences"
+            app:destination="@id/nav_activity_preferences" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_fragment_about"
+            app:destination="@id/nav_fragment_about" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fragment_about"
+        android:label="Sobre"
+        android:name="com.example.biblia_app.activity_principal.view.FragmentAbout"
+        tools:layout="@layout/about_fragment"
+        >
+    </fragment>
+
+
+
+
+
+
+
+
+
+</navigation>
