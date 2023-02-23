@@ -10,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.biblia_app.R
 import com.example.biblia_app.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -25,7 +26,7 @@ class MainActivitiy : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val toolbar = findViewById<Toolbar>(com.example.biblia_app.R.id.toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
@@ -33,15 +34,15 @@ class MainActivitiy : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navHostFragment =
-            supportFragmentManager.findFragmentById(com.example.biblia_app.R.id.main_nav_host) as NavHostFragment?
+            supportFragmentManager.findFragmentById(R.id.main_nav_host) as NavHostFragment?
         val navController = navHostFragment?.navController
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                com.example.biblia_app.R.id.nav_home,
-                com.example.biblia_app.R.id.nav_activity_bibly,
-                com.example.biblia_app.R.id.nav_activity_preferences,
-                com.example.biblia_app.R.id.nav_fragment_about
+                R.id.nav_home,
+                R.id.nav_activity_bibly,
+                R.id.nav_activity_preferences,
+                R.id.nav_fragment_about
             ),
             drawerLayout
         )
@@ -66,7 +67,7 @@ class MainActivitiy : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(com.example.biblia_app.R.id.main_nav_host)
+        val navController = findNavController(R.id.main_nav_host)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
