@@ -7,14 +7,14 @@
 
 
 
-    <fragment
+    <activity
         android:id="@+id/nav_activity_home"
         android:label="Início"
-        android:name="com.example.biblia_app.activity_principal.view.FragmentHome"
+        android:name="com.example.biblia_app.activity_principal.view.MainActivitiy"
         tools:layout="@layout/home_fragment"
         >
 
-    </fragment>
+    </activity>
     <activity
         android:id="@+id/nav_activity_bibly"
         android:label="Ler a bíblia"
@@ -29,26 +29,6 @@
         tools:layout="@layout/activity_preferences"
         />
 
-    <fragment
-        android:id="@+id/nav_home"
-        android:label="Início"
-        android:name="com.example.biblia_app.activity_principal.view.FragmentHome"
-        tools:layout="@layout/home_fragment"
-
-
-        >
-
-
-        <action
-            android:id="@+id/action_nav_home_to_nav_activity_bibly"
-            app:destination="@id/nav_activity_bibly" />
-        <action
-            android:id="@+id/action_nav_home_to_nav_activity_preferences"
-            app:destination="@id/nav_activity_preferences" />
-        <action
-            android:id="@+id/action_nav_home_to_nav_fragment_about"
-            app:destination="@id/nav_fragment_about" />
-    </fragment>
 
     <fragment
         android:id="@+id/nav_fragment_about"
