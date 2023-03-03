@@ -31,19 +31,14 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-    <LinearLayout
+    <include
+        android:id="@+id/content_main"
+        layout="@layout/content_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="?attr/actionBarSize"
         >
+    </include>
 
-        <include
-            android:id="@+id/content_main"
-            layout="@layout/content_main"></include>
-
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

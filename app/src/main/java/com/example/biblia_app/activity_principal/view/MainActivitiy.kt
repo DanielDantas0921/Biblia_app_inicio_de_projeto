@@ -20,9 +20,8 @@ class MainActivitiy : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+
+        setContentView(R.layout.activity_main)
 
 //        val toolbar = findViewById<Toolbar>(R.id.toolbar)
 //
@@ -62,41 +61,19 @@ class MainActivitiy : AppCompatActivity() {
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val navView = findViewById<NavigationView>(R.id.nav_view)
 
-        val navHostFragment =
-           supportFragmentManager.findFragmentById(R.id.main_nav_host) as NavHostFragment?
 
-        val navController = navHostFragment?.navController
+        val navController = findNavController(R.id.main_nav_host)
 
 
 
 
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_activity_home, R.id.nav_activity_bibly, R.id.nav_activity_preferences,
-                R.id.nav_fragment_about),
-            fallbackOnNavigateUpListener = ::onSupportNavigateUp
+            setOf(R.id.nav_fragment_home, R.id.nav_fragment_about), drawerLayout
         )
 
 
-//        appBarConfiguration = navController?.graph?.let { AppBarConfiguration(it) }!!
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-
-
-//        if (navController != null) {
-//            setupActionBarWithNavController(navController, appBarConfiguration)
-//        }
-
-        if (navController != null) {
-            navView.setupWithNavController(navController)
-        }
-
-
-        if (navController != null) {
-            findViewById<NavigationView>(R.id.nav_view)
-                .setupWithNavController(navController)
-        }
-
-
-
+        setupActionBarWithNavController(navController,appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 
 

@@ -2,33 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@layout/home_fragment"
+    app:startDestination="@id/nav_fragment_home"
     android:id="@+id/mobile_navigation">
 
 
 
-    <activity
-        android:id="@+id/nav_activity_home"
-        android:label="Início"
-        android:name="com.example.biblia_app.activity_principal.view.MainActivitiy"
+    <fragment
+        android:id="@+id/nav_fragment_home"
+        android:label="Inicio"
+        android:name="com.example.biblia_app.activity_principal.view.FragmentHome"
         tools:layout="@layout/home_fragment"
         >
 
-    </activity>
-    <activity
-        android:id="@+id/nav_activity_bibly"
-        android:label="Ler a bíblia"
-        android:name="com.example.biblia_app.activity_principal.view.BiblyActivity"
-        tools:layout="@layout/activity_bibly"
-        />
-
-    <activity
-        android:id="@+id/nav_activity_preferences"
-        android:label="Preferências/ Ferramentas"
-        android:name="com.example.biblia_app.activity_principal.view.PreferencesActivity"
-        tools:layout="@layout/activity_preferences"
-        />
-
+    </fragment>
 
     <fragment
         android:id="@+id/nav_fragment_about"

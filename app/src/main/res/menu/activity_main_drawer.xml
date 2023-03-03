@@ -5,19 +5,9 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_activity_home"
+            android:id="@+id/nav_fragment_home"
             android:icon="@drawable/baseline_home_24"
             android:title="Início" />
-
-        <item
-            android:id="@+id/nav_activity_bibly"
-            android:icon="@drawable/baseline_book_24"
-            android:title="Ler a Bíblia" />
-
-        <item
-            android:id="@+id/nav_activity_preferences"
-            android:icon="@drawable/baseline_room_preferences_24"
-            android:title="Preferências/Ferramentas" />
 
 
     </group>
